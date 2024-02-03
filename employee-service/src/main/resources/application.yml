@@ -1,0 +1,11 @@
+server:
+  port: 8080
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+      #/api/v2/spans this is the place where zipkin stores the trace id and span id
+      #This property is optional even if you remove it system will send it since this is default port and url for zipkin
